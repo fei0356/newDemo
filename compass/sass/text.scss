@@ -1,0 +1,26 @@
+    @import "compass/reset";
+    .class1{
+       border:1px solid red; 
+    }
+    .class2{
+        @extend.class1;
+        color:red;
+    }
+    @mixin left{
+        float:left;
+        margin-left:10px;
+    }
+    div{
+        @include left;
+    }
+    @mixin right($value: 10px ){
+        float:right;
+        margin-right:$value;
+    }
+    a{
+        color:red;
+    }
+    span{
+        
+        color:red;
+    }

@@ -1,0 +1,87 @@
+{
+
+	"/web/user/setting": "person.html",
+	"/web/user/login": "login.html",
+	"/web/user/register": "register.html",
+	"/web/user/findPassword": "findpassword.html",
+
+
+	"/web/mp/list": "mypublic.html",
+	"/web/mp/authcode": "takepublic.html",
+	"/web/mp/add": "addpublic.html",
+	"/web/mp/callback": "mpCallback.html?mp_weixin_id=xuds1029",
+	"/web/mp/edit": "mp_editor.html",
+
+	"/web/msg/center": "message.html",
+	
+	"/web/event/index": "wemedia.html",
+
+	"/web/gift/own": "own.html",
+	"/web/gift/allGift": "allgift.html",
+	"/web/gift/giftDetail": "giftdetail.html",
+	
+	"/web/index/index": "index.html",
+
+
+	"/web/advertise/adAgreement": "ad_agreement.html",
+	"/web/advertise/adAllLists": "ad_all_lists.html",
+	"/web/advertise/adMyJoin": "ad_myjoin.html",
+	"/web/advertise/adAccount": "ad_account.html",
+	"/web/advertise/adSignDetail": "ad_signdetail.html",
+
+	"/web/hd/getMpsFans": "mypublicfans.html",
+
+	"/web/index/about": "about.html",
+	
+	"/web/index/informations": "informations.html",
+
+	"/web/wmpick/inviteList": "pick_invite_list.html",
+	"/web/wmpick/orderList": "pick_order_list.html",
+	
+	
+	"/web/public/gift": "public_gift.html",
+	"/web/public/pick": "public_pick.html",
+	"/web/public/list": "public_list.html",
+	"/web/public/mpInfo": "public_mp_info.html",
+	"/web/public/search": "public_mp_search.html",
+	
+	"/web/public/hpQuestion": "public_help_question.html",
+	"/web/public/adCourse": "public_help_adCourse.html",
+	"/web/public/medCourse": "public_help_medCourse.html",
+	"/web/public/hpWord": "public_help_word.html",
+	"/web/public/hpAgreement": "public_help_agreement.html",
+	
+		
+	"/web/public/abCompany":"public_about_company.html",
+	"/web/public/abProduct":"public_about_product.html",
+	"/web/public/abContact":"public_about_contact.html",
+	"/web/public/abPartner":"public_about_partner.html",
+	"/web/public/abReport":"public_about_report.html",
+	"/web/public/abReportPay":"public_about_reportPay.html",
+	
+	"/web/recruit/details": "recruit_details.html",
+	"/web/recruit/friends": "recruit_friends.html",
+	"/web/recruit/bill": "recruit_bill.html",
+
+	"/web/subscribe/subscribe": "subscribe.html",
+
+	"/web/gdt/gdt": "wide.html",
+	"/web/gdt/gdtInfo": "wide_form.html",
+
+	"/web/wmdraft/inviteList": "draft_invite_list.html",
+	"/web/wmdraft/orderList": "draft_order_list.html",
+	"/web/wmpickmobile/inviteList": "pick_invite_listmobile.html",
+	
+	"/web/mp/trade": "mp_trade.html",
+	
+	"/web/public/channel_36kr": "public_36ke.html",
+	
+	"/web/monitor/timing": "monitor_timing.html",
+	"/web/monitor/promptly": "monitor_promptly.html",
+	"/web/monitor/list": "monitor_list.html",
+	"/web/monitor/transaction": "monitor_transaction.html",
+	"/web/monitor/details": "monitor_details.html",
+	"/web/monitor/detailsExample": "monitor_details_example.html",
+
+	"/web/observe/index": "observe.html"
+}

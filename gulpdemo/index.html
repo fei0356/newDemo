@@ -1,0 +1,21 @@
+effect: "fadeOut",
+					cb: function(){
+						el1.animatefn({
+							effect: "fadeIn",
+							cb: function(){
+								el1.animatefn({
+									effect: "fadeOut",
+									cb: function(){
+										el2.animatefn({
+											effect: "fadeIn",
+											cb:function(){
+												el2.animatefn({
+													effect: "fadeOut"
+												})
+											}
+										})
+									}
+								})
+							}
+						})
+					}

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/animate.css">
+	<style type="text/css">
+	.red{
+		color:red;
+	}
+	.blue{
+		color:blue;
+	}
+	.trs{
+		width:300px;
+		height:100px;
+		line-height: 100px;
+		text-align: center;
+		border:1px solid red;
+		margin: 0 auto;
+	}
+	</style>
+</head>
+<body id="main">
+	<div >{{message}}</div>
+	<input v-model='message'></input>
+	<ul>
+		<li v-for='todo in todos'>
+			{{todo.text}},{{$index}}
+			<button @click = 'delFn($index)'></button>
+		</li>
+		
+	</ul>
+
+	<button @click='clickFn'>clickMe</button>
+
+	<input v-model="inputText" @keyup.enter = 'keyupFn' value="1"></input>
+
+	<span>a={{a}}, b={{b}}</span>
+
+	<span>{{ fullname }},{{firstname}},{{lastname}}</span>
+
+	<span :class="{'red':isred , 'blue':isblue}">123</span>
+
+	<span class="raa" :class="[red,{blue:isblue,black:isblack}]">3456</span>
+
+	<div class="trs" v-show="ok" :style="animatFn" transition="fade">过渡</div>
+	<button @click = 'trsFn'>showBtn</button>
+	<button @click = 'hidFn'>delBtn</button>
+	
+	<template v-if="ok">
+	  <h1>Title</h1>
+	  <p>Paragraph 1</p>
+	  <p>Paragraph 2</p>
+	</template>
+
+	<ul>
+		<template v-for="(index,todo) in todos">
+	  		<li>{{todo.text}}</li>
+	  		<li>{{todo.age}}</li>
+		</template>
+	</ul>
+	
+
+	<script type="text/javascript">
+
+		var ops = {
+			el:'#main',
+			data:{
+				ok:false,
+				isred:true,
+				isblue:true,
+				message:'hello',
+				inputText:'1',
+				todos:[
+					{text:1,age:'q'},
+					{text:2,age:'d'},
+					{text:3,age:'g'},
+					{text:4,age:'m'}
+				],
+				a:1,
+				firstname:'abc',
+				lastname:'def',
+				animatFn:{
+					animationDuration: "1s"
+				}
+				
+			},
+
+			methods:{
+				clickFn:function(){
+					this.message = this.message.split('').reverse().join('');
+				},
+				keyupFn:function(){
+					var text = this.inputText.trim();
+					if(text){
+						this.todos.push({text:text})
+					}
+					this.inputText = '';
+				},
+				delFn:function(index){
+					this.todos.splice(index,1);
+				},
+				trsFn:function(){
+					if(this.ok){
+						return this.ok = false;
+					}else{
+						return this.ok = true;	
+					}
+				},
+				hidFn:function(){
+					this.ok = false
+				}
+				
+			},
+
+			transitions: {
+				bounce: {
+		            enterClass: 'bounceInRight',
+		            leaveClass: 'bounceOutRight'
+		        },
+		        slide: {
+		        	enterClass: 'slideInRight',
+		        	leaveClass: 'slideOutRight'
+		        },
+		        fade: {
+		        	enterClass: "fadeIn",
+		        	leaveClass: "fadeOut"
+		        }
+		    },
+
+			created: function(){
+				console.log(this.inputText)
+			},
+
+			computed:{
+				b:function(){
+					return this.a+1
+				},
+				fullname:{
+					get:function(){
+						return this.firstname + this.lastname
+					},
+					set:function(newname){
+						var name = newname.split(' ');
+						this.firstname = name[0];
+						this.lastname = name[name.length-1]
+					}
+				}
+			},
+
+			
+		}
+		var vm = new Vue(ops);
+
+	</script>
+</body>
+</html>

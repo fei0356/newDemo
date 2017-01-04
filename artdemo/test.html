@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="template.js"></script>
+	</head>
+	<body>
+		<div id="content"></div>  
+        <script id="test" type="text/html">  
+                <h2>{{title}}</h2>  
+                <ul>  
+                    {{each list as value index}}  
+                        <li>{{value.name}}</li>  
+                        <li>{{value.cor}}</li>
+                    {{/each}}  
+                </ul>  
+        </script>  
+        <script>  
+            var data = {  
+                title : 'HELLO WORLD',  
+                list : [
+                				{
+                					name:"新闻1",
+                					cor:"1"
+                				},
+                				{
+                					name:"新闻2",
+                					cor:"2"
+                				},
+                				{
+                					name:"新闻3",
+                					cor:"3"
+                				},
+                				{
+                					name:"新闻4",
+                					cor:"4"
+                				}
+                			]
+            };  
+            var html = template('test', data);  
+            document.getElementById("content").innerHTML = html;  
+        </script> 
+	</body>
+</html>
